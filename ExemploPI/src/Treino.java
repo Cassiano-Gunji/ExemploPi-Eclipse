@@ -3,6 +3,7 @@ import javax.swing.JOptionPane;
 public class Treino {
 	
 	// Atributos
+	// Vetores (arrays) são estruturas que armazenam vários valores de mesmo tipo
 	private Exercicio[] segunda = new Exercicio[10];
 	private Exercicio[] terca = new Exercicio[10];
 	private Exercicio[] quarta = new Exercicio[10];
@@ -98,30 +99,30 @@ public class Treino {
 	}
 	public void orienteTreino() {
 		String [] dias = {"segunda",  "terça", "quarta", "quinta", "sexta"};
-		int resposta = JOptionPane.showOptionDialog(null, "Que dia é hoje?", "Iniciar treino", 0, 
+		int resposta = JOptionPane.showOptionDialog(null, "Qual treino deseja fazer?", "Iniciar treino", 0, 
 				JOptionPane.QUESTION_MESSAGE, null, dias, "segunda");
-		switch(resposta) {
-		case 0:
+		switch(dias[resposta]) {
+		case "segunda":
 			for (int i = 0; i < 10 && segunda[i] != null; i++) {
 				segunda[i].orienteExercicio();
 			}
 			break;
-		case 1:
+		case "terça":
 			for (int i = 0; i < 10 && terca[i] != null; i++) {
 				terca[i].orienteExercicio();
 			}
 			break;
-		case 2:
+		case "quarta":
 			for (int i = 0; i < 10 && quarta[i] != null; i++) {
 				quarta[i].orienteExercicio();
 			}
 			break;
-		case 3:
+		case "quinta":
 			for (int i = 0; i < 10 && quinta[i] != null; i++) {
 				quinta[i].orienteExercicio();
 			}
 			break;
-		case 4:
+		case "sexta":
 			for (int i = 0; i < 10 && sexta[i] != null; i++) {
 				sexta[i].orienteExercicio();
 			}

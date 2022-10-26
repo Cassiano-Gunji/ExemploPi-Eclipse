@@ -19,7 +19,8 @@ public class Exercicio {
 		return series;
 	}
 	public void setSeries(int series) {
-		if (series > 0) {
+		// Garante que apenas valores sensatos sejam armazenados
+		if (series >= 2 && series <= 5) {
 			this.series = series;
 		}
 	}
@@ -27,14 +28,16 @@ public class Exercicio {
 		return repeticoes;
 	}
 	public void setRepeticoes(int repeticoes) {
-		if (repeticoes > 0) {
+		// Garante que apenas valores sensatos sejam armazenados
+		if (repeticoes >= 5 && repeticoes <= 30) {
 			this.repeticoes = repeticoes;
 		}
 	}
 	
 	// Construtores
 	public Exercicio() {
-		
+		// Chama o construtor com parâmetros
+		this("Exercício indefinido", 3, 15);
 	}
 	
 	// Métodos
